@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract PigToken {
+contract SheepToken {
 
 	string public name = "Sheep Token";
 	string public symbol = "SHEEP";
