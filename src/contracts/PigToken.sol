@@ -10,7 +10,7 @@ contract PigToken {
 	mapping(address => uint256) balanceOf;
 	mapping (address => mapping(address => uint256)) allowance;
 	
-	constructor() {
+	constructor() public {
 		balanceOf[msg.sender] = totalSupply;
 	}
 
@@ -26,35 +26,10 @@ contract PigToken {
 		uint256 _value
 	);
 
-	function name() public view returns(string) {
-		return name;
-	}
-
-	function symbol() public view returns(string) {
-		return symbol;
-	}
-
-	function decimals() public view returns(uint8) {
-		return decimals;
-	}
-
-	function totalSupply() public view returns(uint256) {
-		return totalSupply;
-	}
-
-	function balanceOf(address _owner) public view returns(uint256) {
-		return balanceOf[_owner];
-	}
-
-	function allowance(address _owner, address _spender) public view returns(uint256) {
-		return allowance[_owner][_spender];
-	}
-
-
 	function transfer(address _to, uint256 _value) public returns(bool success) {
 		require(balanceOf[msg.sender] >= _value);
 		balanceOf[msg.sender] -= _value;
-		balance[_to] += _value;
+		balanceOf[_to] += _value;
 		emit Transfer(msg.sender, _to, _value);
 		return true;
 	}
