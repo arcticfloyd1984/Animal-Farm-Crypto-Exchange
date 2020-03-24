@@ -7,8 +7,8 @@ contract SheepToken {
 	uint8 public decimals = 18;
 	uint256 public totalSupply = 1000000000000000000000000;
 
-	mapping(address => uint256) balanceOf;
-	mapping (address => mapping(address => uint256)) allowance;
+	mapping(address => uint256) public balanceOf;
+	mapping (address => mapping(address => uint256)) public allowance;
 	
 	constructor() public {
 		balanceOf[msg.sender] = totalSupply;
