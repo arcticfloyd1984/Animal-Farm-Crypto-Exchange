@@ -5,7 +5,7 @@ contract SheepToken {
 	string public name = "Sheep Token";
 	string public symbol = "SHEEP";
 	uint8 public decimals = 18;
-	uint256 public totalSupply = 1000000000000000000000000;
+	uint256 public totalSupply = 100000000000000000000000;
 
 	mapping(address => uint256) public balanceOf;
 	mapping (address => mapping(address => uint256)) public allowance;

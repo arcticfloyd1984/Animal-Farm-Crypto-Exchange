@@ -5,7 +5,7 @@ contract PigToken {
 	string public name = "Pig Token";
 	string public symbol = "PIG";
 	uint8 public decimals = 18;
-	uint256 public totalSupply = 1000000000000000000000000;
+	uint256 public totalSupply = 10000000000000000000000;
 
 	mapping(address => uint256) public balanceOf;
 	mapping (address => mapping(address => uint256)) public allowance;
